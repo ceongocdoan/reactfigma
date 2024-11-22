@@ -14,11 +14,36 @@ import CourseSection from '../CourseSection/CourseSection';
 import Testimonials from '../TestimonialCard/TestimonialsPage';
 import Footer from '../Footer/Footer';
 import TestimonialSection from '../TestimonialCard/TestimonialSection';
+import Pagination from '../UniversityPartners/Pagination';
+// mobileop
+
+
+
+import OnschoolLandingPage from '../../mobileop/Header/OnschoolLandingPage';
+import UniversityPartnersMobile from '../../mobileop/UniversityPartners/UniversityPartnersMobile';
+import OnschoolHero from '../../mobileop/SloganMobile/OnschoolHero';
+import FMGEMethodMobile from '../../mobileop/FMGEMethodMobile/FMGEMethodMobile';
+import LearningExperience from '../../mobileop/LearningExperience/LearningExperience';
+import ExpertSection from '../../mobileop/Experts/ExpertSection';
+import CoursePage from '../../mobileop/Courses/CoursePage';
+import { Landingpagemo } from '../../mobileop/LandingMobile/Landingpagemo';
+import TestMobile from '../../mobileop/TestMobile/TestMobile';
+import FooterMobile from '../../mobileop/FooterMobile/FooterMobile';
+
+
+
+
+
+
+
 
 const HeaderSection = () => {
   return (
-    <div className="flex flex-col bg-white-50">
-      {/* Fixed Header */}
+    <>
+    
+    
+    <div className="hidden sm:block flex flex-col bg-white-50">
+      
       <div className="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
         <Header2 />
       </div>
@@ -39,33 +64,57 @@ const HeaderSection = () => {
         {/* Partner Section */}
         <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24">
           <Partner />
+          {/* <Pagination /> */}
         </div>
 
-        
-        
-        
-      {/* <Partner /> */}
-      
-      {/* <ImageGallery/> */}
-   <HeroSection1/>
-      <FMGEMethod/>
-      <div className='mt-[70px] space-y-12 '>
-        <LearningByDoing/>
-        <ProjectBasedLearning/>
-      </div>
-      <GuidedSelfPractice/>
-      <ExpertTeam/>
-      <CourseSection/>
-      
-      
 
-      <TestimonialSection/>
+
+
+        {/* <Partner /> */}
+
+        {/* <ImageGallery/> */}
+        <HeroSection1 />
+        <FMGEMethod />
+        <div className='mt-[70px] space-y-12 '>
+          <LearningByDoing />
+          <ProjectBasedLearning />
         </div>
+        <GuidedSelfPractice />
+        <ExpertTeam />
+        <CourseSection />
 
-        {/* Footer */}
-        <Footer />
+
+
+        <TestimonialSection />
       </div>
-    // </div>
+
+      {/* Footer */}
+      <Footer />
+    </div>
+
+
+    
+
+    
+
+    <div className="block sm:hidden">
+      <div className="mb-9">
+  <OnschoolLandingPage  />
+</div>
+  {/* <PartnerSection  /> */}
+  <UniversityPartnersMobile  /> 
+  {/* <OnschoolHero  /> */}
+  <OnschoolHero  />
+  <FMGEMethodMobile  />
+  <LearningExperience />
+  <ExpertSection />
+  <CoursePage />
+<Landingpagemo />
+{/* <TargetCareerMobile */}
+<TestMobile />
+<FooterMobile />
+</div>
+</>
   );
 };
 

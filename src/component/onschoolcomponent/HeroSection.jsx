@@ -15,8 +15,8 @@ function HeroSection() {
             </p>
           </div>
           <div className="flex gap-3 items-start mt-12 text-lg font-semibold leading-7 text-white max-md:mt-10">
-            <button className="flex overflow-hidden gap-2.5 justify-center items-center px-6 py-4 bg-sky-600 rounded-xl border-2 border-solid shadow-sm border-white border-opacity-10 max-md:px-5">
-              <span className="self-stretch px-0.5 my-auto">Bắt đầu ngay!</span>
+            <button className="transition transform hover:bg-blue-600 active:scale-95  active flex overflow-hidden gap-2.5 justify-center items-center px-6 py-4 bg-sky-600 rounded-xl border-2  shadow-sm border-white border-opacity-10 max-md:px-5">
+              <span className=" self-stretch px-0.5 my-auto">Bắt đầu ngay!</span>
             </button>
           </div>
         </div>

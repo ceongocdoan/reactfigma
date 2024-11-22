@@ -83,7 +83,7 @@ function CourseSection() {
             <ProjectCard key={index} {...project} />
           ))}
         </div>
-        <button className="flex overflow-hidden gap-1.5 justify-center items-center self-center px-5 py-3 mt-8 text-base font-semibold leading-6 text-white bg-sky-600 rounded-lg border-2 border-solid shadow-sm border-white border-opacity-10">
+        <button className=" transition transform hover:bg-blue-700 active:scale-95 flex overflow-hidden gap-1.5 justify-center items-center self-center px-5 py-3 mt-8 text-base font-semibold leading-6 text-white bg-sky-600 rounded-lg border-2  shadow-sm border-white border-opacity-10">
           Khám phá tất cả khoá học
         </button>
       </div>

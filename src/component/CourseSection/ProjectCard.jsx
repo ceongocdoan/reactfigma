@@ -47,7 +47,7 @@ function ProjectCard({ title, description, level, duration }) {
               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad5bb7216394043db2511f597969beb67dabd812aee7647575713e26bdab7e64?apiKey=ac8d84f3191644fbac37f90f1063bf65&" className="object-contain shrink-0 self-stretch my-auto w-8 aspect-square" alt="" />
               <div className="flex flex-col self-stretch my-auto w-10">
                 <div className="flex flex-col pt-1 w-full">
-                  <div className="py-0.5 w-full">{duration}</div>
+                  <div className="whitespace-nowrap py-0.5 w-full">{duration}</div>
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TestimonialCard = ({ imageSrc, testimonial, name }) => {
   return (
-    <article className="flex flex-col self-stretch my-auto w-96 bg-white rounded-3xl border border-gray-300 border-solid shadow-lg min-w-[240px]">
+    <article className="flex flex-col ml-[5%]  self-stretch my-auto text-base leading-6 text-gray-900 bg-white rounded-3xl border border-gray-300 border-solid shadow-lg min-w-[240px] w-[89%]">
       <div className="flex relative z-10 flex-col mt-0 ml-6 w-16 rounded-full aspect-square max-md:ml-2.5">
         <img loading="lazy" src={imageSrc} alt={`${name}'s profile`} className="object-cover absolute inset-0 size-full" />
         <div className="flex relative shrink-0 h-16 rounded-full border border-solid border-black border-opacity-10" />

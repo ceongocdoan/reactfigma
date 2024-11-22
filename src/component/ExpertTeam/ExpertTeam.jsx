@@ -33,7 +33,7 @@ const ExpertTeam = () => {
           <h1 className="flex flex-col flex-1 shrink max-w-screen-md text-4xl tracking-tighter leading-10 text-gray-900 basis-0 min-w-[320px] max-md:max-w-full">
             Lộ trình học do đội ngũ chuyên gia dày dặn kinh nghiệm thiết kế
           </h1>
-          <div className="flex gap-3 items-start text-base leading-6 text-white">
+          <div className="transition transform hover:bg-blue-100 active:scale-95 flex gap-3 items-start text-base leading-6 text-white">
             <button className="flex overflow-hidden gap-1.5 justify-center items-center px-5 py-3 bg-sky-600 rounded-lg border-2 border-solid shadow-sm border-white border-opacity-10">
               Đăng ký tư vấn ngay!
             </button>
