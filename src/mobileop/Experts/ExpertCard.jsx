@@ -1,4 +1,5 @@
 import * as React from "react";
+import ProfileCardMo from "./ProfileCardMo";
 
 function ExpertCard({ image, name, experience, role, stars = 5 }) {
   return (
@@ -30,6 +31,16 @@ function ExpertCard({ image, name, experience, role, stars = 5 }) {
         {/* Thông tin bổ sung */}
         <p className="mt-2 text-base text-gray-300"> {experience}</p>
         <p className="text-sm text-gray-400">{role}</p>
+      </div>
+      <div className="flex relative flex-col justify-center px-6 pt-24 pb-6 max-md:px-5">
+      <div className="flex flex-col ml-3 mt-28">
+          <ProfileCardMo
+            name={name}
+            experience={experience}
+            role={role}
+            stars={stars}
+          />
+        </div>
       </div>
     </article>
   );
