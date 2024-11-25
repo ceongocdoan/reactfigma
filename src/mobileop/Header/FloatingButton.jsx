@@ -10,7 +10,7 @@ const buttonItems = [
 function FloatingButton() {
   return (
     <div aria-label="Floating navigation" 
-    className="  flex active:scale-95 flex-col fixed bottom-4 right-6 z-50 max-w-[50px] w-auto flex-col ">
+    className="  flex active:scale-95 flex-col fixed  bottom-4 right-2 z-50 max-w-[50px] w-auto flex-col ">
       {buttonItems.map((item, index) => (
         <FloatingButtonItem
           key={index}
@@ -19,7 +19,7 @@ function FloatingButton() {
           // className={index > 0 ? "mt-2" : ""}
           // src={item.src}
           // alt={item.alt}
-          className={`w-4 h-8 ${index > 0 ? "mt-2" : ""}`}
+          className={`w-6 h-10 ${index > 0 ? "mt-4" : ""} scale-75 opacity-50 hover:opacity-100 hover:scale-100 transition-transform duration-300 ease-in-out`}
         />
       ))}
     </div>
@@ -29,22 +29,4 @@ function FloatingButton() {
 export default FloatingButton;
 
 
-// function FloatingButton() {
-//   return (
-//     <div
-//       aria-label="Floating navigation"
-//       className="flex flex-col fixed bottom-4 right-4 z-50 max-w-[50px] w-auto"
-//     >
-//       {buttonItems.map((item, index) => (
-//         <FloatingButtonItem
-//           key={index}
-//           src={item.src}
-//           alt={item.alt}
-//           className={index > 0 ? "mt-2" : ""}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
 
-// export default FloatingButton;
