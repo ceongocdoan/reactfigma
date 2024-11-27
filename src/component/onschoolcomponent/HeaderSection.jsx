@@ -29,6 +29,7 @@ import CoursePage from '../../mobileop/Courses/CoursePage';
 import { Landingpagemo } from '../../mobileop/LandingMobile/Landingpagemo';
 import TestMobile from '../../mobileop/TestMobile/TestMobile';
 import FooterMobile from '../../mobileop/FooterMobile/FooterMobile';
+import OnSchoolSection from '../SloganMobile/OnschoolHero';
 
 
 
@@ -74,6 +75,8 @@ const HeaderSection = () => {
 
         {/* <ImageGallery/> */}
         <HeroSection1 />
+        {/* <OnSchoolSection /> */}
+        {/* <OnschoolHero /> */}
         <FMGEMethod />
         <div className='mt-[70px] space-y-12 '>
           <LearningByDoing />

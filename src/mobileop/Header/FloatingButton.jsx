@@ -10,7 +10,7 @@ const buttonItems = [
 function FloatingButton() {
   return (
     <div aria-label="Floating navigation" 
-    className="  flex active:scale-95 flex-col fixed  bottom-4 right-2 z-50 max-w-[50px] w-auto flex-col ">
+    className="  flex active:scale-95 flex-col fixed  bottom-16 right-2 z-50 max-w-[50px] w-auto flex-col ">
       {buttonItems.map((item, index) => (
         <FloatingButtonItem
           key={index}

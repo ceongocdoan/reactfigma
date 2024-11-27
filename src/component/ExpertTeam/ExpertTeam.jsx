@@ -39,8 +39,8 @@ const ExpertTeam = () => {
             </button>
           </div>
         </header>
-        <div className="flex flex-col mt-16 w-full max-md:mt-10 max-md:max-w-full">
-          <div className="flex flex-wrap gap-8 items-start w-full max-md:max-w-full">
+        <div className="flex flex-col mt-16 w-full max-md:mt-10 max-lg:max-w[600px] max-lg:justify-center max-lg:items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 w-full max-md:mt-10 max-lg:justify-center max-lg:items-center max-lg:w-[72%] max-lg:p-[30px]">
             {experts.map((expert, index) => (
               <ExpertCard key={index} {...expert} />
             ))}

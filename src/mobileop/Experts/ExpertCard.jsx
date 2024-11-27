@@ -32,8 +32,8 @@ function ExpertCard({ image, name, experience, role, stars = 5 }) {
         <p className="mt-2 text-base text-gray-300"> {experience}</p>
         <p className="text-sm text-gray-400">{role}</p>
       </div>
-      <div className="flex relative flex-col justify-center px-6 pt-24 pb-6 max-md:px-5">
-      <div className="flex flex-col ml-3 mt-28">
+      <div className="flex self-stretch flex-col justify-center mt-28  max-md:px-5">
+      <div className="flex flex-col ml-3 mt-16">
           <ProfileCardMo
             name={name}
             experience={experience}
