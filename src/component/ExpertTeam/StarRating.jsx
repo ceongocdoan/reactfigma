@@ -4,7 +4,7 @@ const StarRating = () => {
   const stars = Array(5).fill(null); // 5 sao
 
   return (
-    <div className="flex gap-1 items-center self-start">
+    <div className="flex gap-1 items-center self-start mt-4 ">
       {stars.map((_, index) => (
         <svg
           key={index}
