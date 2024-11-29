@@ -72,7 +72,7 @@ function CoursePage() {
           </ul>
         </nav>
       </div>
-      <div className="flex flex-col px-[5%] mt-12 w-full">
+      <div className="flex flex-col px-4 mt-12 w-full">
         <div className="flex flex-col items-center w-full max-w-screen-xl">
           <div className="flex flex-col max-w-full ">
             {courses.map((course, index) => (

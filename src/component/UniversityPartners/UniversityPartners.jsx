@@ -31,7 +31,7 @@ const PartnerSection = ({ title, partners }) => {
       {
         breakpoint: 768, // Màn hình nhỏ hơn 768px
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],

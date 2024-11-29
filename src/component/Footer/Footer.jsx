@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex overflow-hidden flex-col items-center pt-16 pb-12 bg-sky-600 border-t border-gray-200">
+    <footer className="flex overflow-hidden flex-col items-center pt-16 pb-12 bg-[#0072BC] border-t border-gray-200">
       <div className="flex flex-col px-8 w-full max-w-screen-xl max-md:px-5 max-md:max-w-full">
         <div className="flex flex-wrap gap-12 items-start w-full max-md:max-w-full">
           <div className="flex flex-col w-80 max-w-xs min-w-[320px]">
