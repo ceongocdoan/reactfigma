@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import Slider from "react-slick"; // Import Slider
 import TestimonialCard from "./TestimonialCard";
@@ -37,58 +35,91 @@ const testimonials = [
     testimonial: "Mình chọn Onschool vì được bạn bè giới thiệu, học phí cũng phù hợp với tình hình của mình lúc đó...",
     name: "Nguyễn Văn Chương",
   },
-  
 ];
 
 const TestimonialCarousel = () => {
-  // Cấu hình của Slick Slider
-  const settings = {
+  const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5, // Default
     slidesToScroll: 1,
-    arrows: false, 
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "20px", // Khoảng cách giữa các card
     responsive: [
       {
-        breakpoint: 1140, 
+        breakpoint: 1286,
         settings: {
-          slidesToShow: 3, 
-          slidesToScroll: 1, 
+          slidesToShow: 4,
+          centerPadding: "15px",
         },
       },
       {
-        breakpoint: 870, // Khi màn hình dưới 
+        breakpoint: 1105,
         settings: {
-          slidesToShow: 2, 
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          centerPadding: "15px",
         },
       },
       {
-        breakpoint: 470, // Khi màn hình dưới 
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, 
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          centerPadding: "10px",
         },
       },
     ],
   };
 
+  const PrevButton = ({ onClick }) => (
+    <button
+      onClick={onClick}
+      className="transition transform hover:bg-blue-50 active:scale-95 flex justify-center items-center p-3 w-12 h-12 border-2 border-gray-100 border-solid shadow rounded-[100px]"
+      aria-label="Previous testimonial"
+    >
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/057aab5311cf46f4b038f586fb84e77f/c24a9934dba55c41d42b7a9930287b31f7b67d5965bf23fb91df5c46d38de6d7?apiKey=057aab5311cf46f4b038f586fb84e77f&"
+        alt=""
+        className="object-contain self-stretch my-auto w-6 aspect-square"
+      />
+    </button>
+  );
+
+  const NextButton = ({ onClick }) => (
+    <button
+      onClick={onClick}
+      className="transition transform hover:bg-blue-50 active:scale-95 flex justify-center items-center p-3 w-12 h-12 border-2 border-gray-100 border-solid shadow rounded-[100px]"
+      aria-label="Next testimonial"
+    >
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/057aab5311cf46f4b038f586fb84e77f/a13b3a4a8112c5e2b40ccf6d3b7921179d8d4670e084f66715cf6b4298867efe?apiKey=057aab5311cf46f4b038f586fb84e77f&"
+        alt=""
+        className="object-contain self-stretch my-auto w-6 aspect-square"
+      />
+    </button>
+  );
+
+  let sliderRef = null;
+
   return (
-    <div className="w-full mx-auto">
-      <Slider {...settings}>
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard
-            key={index}
-            imageSrc={testimonial.imageSrc}
-            testimonial={testimonial.testimonial}
-            name={testimonial.name}
-          />
-        ))}
-      </Slider>
-    </div>
+    <section className="flex flex-col justify-center items-center  mt-8 w-full">
+      <div className="w-[100%] max-w-full">
+        <Slider ref={(slider) => (sliderRef = slider)} {...sliderSettings}>
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} {...testimonial} />
+          ))}
+        </Slider>
+        <div className="flex justify-end pr-4  mt-4  gap-4 pl-4">
+          <PrevButton onClick={() => sliderRef.slickPrev()} />
+          <NextButton onClick={() => sliderRef.slickNext()} />
+        </div>
+      </div>
+    </section>
   );
 };
 
